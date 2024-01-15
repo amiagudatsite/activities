@@ -1,0 +1,29 @@
+---
+import Layout from "./Layout.astro";
+import Button from "../components/Button.astro";
+import Arrow from "../components/Arrow.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <div>
+    <div class="w-[150px]">
+      <Button
+        className="py-[4px] px-3 flex-row-reverse"
+        title="חזרה לקטגוריות"
+        href="/"
+      >
+        <Arrow width={8} height={8} direction="right" />
+      </Button>
+    </div>
+    <div class="font-bold text-2xl mt-3 mb-5">
+      {title}
+    </div>
+    <slot />
+  </div>
+</Layout>

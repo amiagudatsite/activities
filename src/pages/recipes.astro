@@ -1,0 +1,22 @@
+---
+import List from "../layouts/List.astro";
+import Button from "../components/Button.astro";
+import Arrow from "../components/Arrow.astro";
+---
+
+<List title="מתכונים">
+  <Button
+    title="ספר מתכונים של הגן - קריסטינה בוגקוב"
+    href="/garden-recipes-book-christina.pdf"
+    className="border-l-4 border-l-pink-400"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-pink-400"
+    title="איך מכינים אוכל בבית - חוברת מתכונים"
+    href="/cooking-at-home.pdf"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+</List>

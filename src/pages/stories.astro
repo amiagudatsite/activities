@@ -1,0 +1,36 @@
+---
+import List from "../layouts/List.astro";
+import Button from "../components/Button.astro";
+import Arrow from "../components/Arrow.astro";
+---
+
+<List title="סיפורים">
+  <Button
+    title="5 סיפורים לבני נוער - חני נחמיאס"
+    href="/stories/5-stories-for-teenagers-nahmias.pdf"
+    className="border-l-4 border-l-green-400"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-green-400"
+    title="5 סיפורים לבני נוער - סמדר שיר"
+    href="/stories/5-stories-for-teenagers-shir.pdf"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-green-400"
+    title="הסיפור מזל בתולה"
+    href="/stories/mazal-betula.docx"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-green-400"
+    title="סיפור על הילל ושמאי - מה ששנוא עליך אל תעשה לחברך"
+    href="/stories/hilel-and-shamay.pdf"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+</List>

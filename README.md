@@ -1,20 +1,4 @@
-# Astro Starter Kit: Basics
-
-```sh
-npm create astro@latest -- --template basics
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+# Project Structure
 
 ```text
 /
@@ -32,23 +16,57 @@ Inside of your Astro project, you'll see the following folders and files:
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+# Adding Content
 
-Any static assets, like images, can be placed in the `public/` directory.
+Adding new links to existing pages is relatively simple. Start by loocating the `.astro` file for the page you want to add links to in the `/pages` folder.
 
-## 🧞 Commands
+Each link is a `Button`, so to add a new one simply copy one of the existing links buttons and rename the `href` property
+to be your new link.
 
-All commands are run from the root of the project, from a terminal:
+For example, let's say we want to add a new link to `google.com` with the description `"Hello Google"` to the recipes page.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+In order to do that we first go to the page's astro file (`pages/games.astro`). Then, inside the `List` element,
+we add a new button with the new link and the description (you can copy one of the existing buttons and change it):
 
-## 👀 Want to learn more?
+```tsx
+<button
+  className="mt-5 border-l-4 border-l-pink-300"
+  title="Hello Google!"
+  href="google.com"
+  externalLink={true}
+>
+  <Arrow height="{10}" width="{10}" direction="left" />
+</button>
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The resulting page should look something like this:
+
+```tsx
+<List title="מתכונים">
+  <button
+    title="Hello Google"
+    href="google.com"
+    externalLink={true}
+    className="border-l-4 border-l-pink-400"
+  >
+    <Arrow height={10" width={10} direction="left" />
+  </button>
+  <button
+    className="mt-5 border-l-4 border-l-pink-400"
+    title="איך מכינים אוכל בבית - חוברת מתכונים"
+    href="/cooking-at-home.pdf"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </button>
+</List>
+```
+
+# Deploying Changes
+
+After adding new links, you probably want to deploy your changes so userscan see them.
+
+This is done by commiting your changes with git and pushing them to this repository on GitHub.
+
+Once the commit is pushed a CI pipeline will run which deploys a new version with your changes.
+
+After the deployment pipeline finishes, changes might take a few minutes to propagate to end users.

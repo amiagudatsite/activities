@@ -1,4 +1,8 @@
 ---
+import "@fontsource-variable/open-sans";
+
+import Logo from "../components/Logo.astro";
+
 interface Props {
   title: string;
 }
@@ -7,45 +11,67 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={(import.meta.env.DEV ? "" : import.meta.env.BASE_URL) +
+        "/favicon.svg"}
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body class="flex flex-col h-screen">
+    <div class="p-4 shadow-[0_4px_4px_0_#00000040] mb-8">
+      <div class="container mx-auto">
+        <div class="flex items-center">
+          <a class="mt-1 ml-1" href={import.meta.env.BASE_URL}>
+            <Logo width={38} height={38} />
+          </a>
+          <a
+            class="no-underline text-xl font-bold ml-2"
+            href={import.meta.env.BASE_URL}>אגודת עמי</a
+          >
+          <a
+            class="no-underline text-xl font-normal"
+            href={import.meta.env.BASE_URL}>פעילויות בחירום</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto mb-auto px-4 sm:p-0">
+      <slot />
+    </div>
+    <div class="bg-bg-600 mt-12">
+      <div class="container mx-auto py-12 px-4">
+        <div class="flex items-center">
+          <Logo width={60} height={60} />
+          <div class="mr-2">
+            <div class="text-lg font-bold">אגודת עמי</div>
+            <div class="text-lg">פעילויות בחירום</div>
+          </div>
+        </div>
+        <div class="my-8">
+          אתר זה מרכז פעילויות נגישות וחומרים המתאימים למצבי חירום ואי-וודאות
+          עבור צוותי ההדרכה של אגודת עמי.
+        </div>
+        <div class="flex justify-center">
+          <a href={import.meta.env.BASE_URL}>דף הבית</a>
+          <a class="px-6" href="http://www.agudatami.com/">אתר האגודה</a>
+          <a href="http://www.agudatami.com/">תמיכה</a>
+        </div>
+      </div>
+    </div>
   </body>
+  <style is:global>
+    a {
+      text-decoration-line: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+  </style>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>
