@@ -1,0 +1,83 @@
+
+---
+import List from "../layouts/List.astro";
+import Button from "../components/Button.astro";
+import Arrow from "../components/Arrow.astro";
+---
+
+<List title="בריאות">
+  <Button
+    title="לולי - משחקי מחשב לפעוטות"
+    href="https://www.luli.tv/%d7%9e%d7%a9%d7%97%d7%a7%d7%99%d7%9d/"
+    externalLink={true}
+    className="border-l-4 border-l-purple-400"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-purple-400"
+    title="יויו קטנים - אוסף משחקי מחשב"
+    href="https://www.yo-yoo.co.il/ktantanim/"
+    externalLink={true}
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <div class="font-bold text-xl mt-5 mb-3">משחקים נבחרים</div>
+  <Button
+    className="mt-5 border-l-4 border-l-pink-300"
+    title="דפי צביעה אונליין - יויו"
+    href="https://www.yo-yoo.co.il/coloring_online/index-m.php"
+    externalLink={true}
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-pink-300"
+    title="תופים לילדים - יויו"
+    href="https://www.yo-yoo.co.il/ktantanim/games_play.php?game=473"
+    externalLink={true}
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-pink-300"
+    title="קולות של חיות - יויו"
+    href="https://www.yo-yoo.co.il/ktantanim/mobile-games/games_play.php?game=352"
+    externalLink={true}
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-pink-300"
+    title="פאזל חיות - לולי"
+    href="https://www.luli.tv/%d7%91%d7%99%d7%a0%d7%92-%d7%a4%d7%90%d7%96%d7%9c/"
+    externalLink={true}
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-pink-300"
+    title="מצאו את קוקו הארנב - לולי"
+    href="https://www.luli.tv/%d7%9e%d7%aa%d7%97%d7%91%d7%90%d7%99%d7%9d-%d7%a2%d7%9d-%d7%a7%d7%95%d7%a7%d7%95-%d7%94%d7%90%d7%a8%d7%a0%d7%91/"
+    externalLink={true}
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <div class="font-bold text-xl mt-5 mb-3">משחקים לטבלט ולמחשב בלבד</div>
+  <Button
+    className="mt-5 border-l-4 border-l-blue-300"
+    title="משחק הזיכרון חיות - יויו"
+    href="https://www.yo-yoo.co.il/ktantanim/games_play.php?game=337"
+    externalLink={true}
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-blue-300"
+    title="משחק הזיכרון טלטאביז - לולי"
+    href="https://www.luli.tv/%d7%98%d7%9c%d7%98%d7%90%d7%91%d7%99%d7%96-%d7%9e%d7%a9%d7%97%d7%a7-%d7%96%d7%99%d7%9b%d7%a8%d7%95%d7%9f-2/"
+    externalLink={true}
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+</List>
