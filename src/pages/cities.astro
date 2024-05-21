@@ -1,11 +1,17 @@
 ---
+import Card from "../components/Card.astro";
 import List from "../layouts/List.astro";
 import Button from "../components/Button.astro";
 import Arrow from "../components/Arrow.astro";
 ---
 
 <List title="פעילויות ערים">
-  <Button
+   <div
+      role="list"
+      class="flex justify-center flex-wrap md:w-[700px] w-full mx-auto"
+    >
+      <Card
+ <Button
     title="אילת - מידע על העיר"
     href="/cities/eilat-city.docx"
     className="border-l-4 border-l-orange-400"
@@ -19,6 +25,56 @@ import Arrow from "../components/Arrow.astro";
   >
     <Arrow height={10} width={10} direction="left" />
   </Button>
+
+        className="border-b-purple-400"
+      >
+        <Puzzle />
+      </Card>
+      <Card
+        href="/cities"
+        title="פעילויות ערים"
+        subtitle="11 פעילויות"
+        className="border-b-orange-400"
+      >
+        <Location />
+      </Card>
+      <Card
+        href="https://zuzuspecialoly.kshalem.org.il/"
+        title="פעילויות-ספורט"
+        subtitle="10+ פעילויות"
+        externalLink={true}
+        className="border-b-blue-400"
+      >
+        <Sport />
+      </Card>
+      <Card
+        href="/stories"
+        title="סיפורים בשפה פשוטה"
+        subtitle="4 פעילויות"
+        className="border-b-green-400"
+      >
+        <Book />
+      </Card>
+
+      <Card
+        href="/recipes"
+        title="מתכונים"
+        subtitle="2 פעילויות"
+        className="border-b-pink-400"
+      >
+<Recipe />
+ </Card>
+     <Card
+        href="https://lilach.kshalem.org.il/seeme/story.html"
+        title="תראו אותי"
+        subtitle="4 פעילויות"
+externalLink={true}
+        className="border-b-blue-400"
+      >
+        <Puzzle />
+      </Card>
+    </div>
+ 
   <Button
     className="mt-5 border-l-4 border-l-orange-400"
     title="באר שבע - מידע על העיר"
