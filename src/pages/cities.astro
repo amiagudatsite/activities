@@ -9,6 +9,18 @@ import Arrow from "../components/Arrow.astro";
     title="אילת - מידע על העיר"
     href="/cities/eilat-city.docx"
     className="border-l-4 border-l-orange-400"
+import CV from '../../public/eilat-city.pdf';
+
+export async function GET() {
+  return new Response(
+    new Blob([CV], { type: 'application/pdf' }),
+    {
+      headers: {
+        'Content-Type':'application/pdf',
+      }
+    }
+  );
+}
   >
     <Arrow height={10} width={10} direction="left" />
   </Button>
