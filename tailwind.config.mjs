@@ -10,11 +10,13 @@ export default {
       },
       colors: {
         // TODO: Rename these with sed.
-        "purple-400": "#f72585",
-        "orange-400": "#7209b7",
+        "purple-400": "#7209b7",
+        "orange-400": "#f4a261",
         "blue-400": "#3a0ca3",
-        "green-400": "#f4a261",
-        "pink-400": "#4cc9f0",
+        "green-400": "#84cc16",
+        "pink-400": "#f72585",
+        "lightBlue-400": "#4cc9f0",
+        "haki-400": "#808836",
         "bg-500": "#FAFAFA",
         "bg-600": "#F1F1F1",
         "bg-800": "#CFCFCF",

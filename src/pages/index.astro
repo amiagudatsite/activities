@@ -7,6 +7,7 @@ import Puzzle from "../components/Puzzle.astro";
 import Book from "../components/Book.astro";
 import Sport from "../components/Sport.astro";
 import Health from "../components/Health.astro";
+import DynamicIcon from "../components/DynamicIcon.astro";
 ---
 
 <Layout title="פעילויות בחירום">
@@ -17,7 +18,7 @@ import Health from "../components/Health.astro";
       role="list"
       class="flex justify-center flex-wrap md:w-[700px] w-full mx-auto"
     >
-      <Card
+      <!-- <Card
         href="https://specialforme.org/"
         title="בריאות"
         subtitle="9 פעילויות"
@@ -26,6 +27,8 @@ externalLink={true}
       >
         <Health />
       </Card>
+
+
       <Card
         href="/cities"
         title="פעילויות ערים"
@@ -68,7 +71,63 @@ externalLink={true}
         className="border-b-blue-400"
       >
         <Puzzle />
-      </Card>
+      </Card> -->
+
+
+      <DynamicIcon
+      href="https://specialforme.org/"
+      title="בריאות"
+      subtitle=""
+      externalLink={true}
+      className="border-b-purple-400"
+      icon="icons/health.ico"
+      />
+
+      <DynamicIcon
+      href="/cities"
+      title="פעילויות ערים"
+      subtitle=""
+      externalLink={true}
+      className="border-b-orange-400"
+      icon="icons/cities.ico"
+      />
+
+      <DynamicIcon
+      href="https://zuzuspecialoly.kshalem.org.il/"
+      title="פעילויות-ספורט"
+      subtitle=""
+      externalLink={true}
+      className="border-b-haki-400"
+      icon="icons/sport.ico"
+      />
+
+      <DynamicIcon
+      href="/stories"
+      title="סיפורים בשפה פשוטה"
+      subtitle=""
+      externalLink={true}
+      className="border-b-green-400"
+      icon="icons/stories.ico"
+      />
+
+      <DynamicIcon
+      href="/recipes"
+      title="מתכונים"
+      subtitle=""
+      externalLink={true}
+      className="border-b-pink-400"
+      icon="icons/recipes.ico"
+      />
+
+      <DynamicIcon
+      href="https://lilach.kshalem.org.il/seeme/story.html"
+      title="תראו אותי"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/eyes.ico"
+      />
+
     </div>
   </main>
 </Layout>

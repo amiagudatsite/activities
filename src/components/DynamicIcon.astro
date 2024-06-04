@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  href: string;
+  externalLink?: boolean;
+  className?: string;
+  icon: string;
+}
+
+const { href, title, subtitle, externalLink = false, className, icon } = Astro.props;
+
+const _href =
+  externalLink || import.meta.env.DEV ? href : import.meta.env.BASE_URL + href;
+---
+
+<a
+  class:list={[
+    className,
+    "block w-[165px] group rounded-lg bg-bg-500 py-4 md:w-[200px] border-[1px] border-bg-800 m-3 md:m-2 hover:-translate-y-2 transition-all border-b-4",
+  ]}
+  href={_href}
+>
+  <div class="relative mx-auto w-[144px] h-[144px] flex items-center justify-center">
+    <img src={icon} alt="icon" class="absolute inset-0 w-full h-full object-cover" />
+  </div>
+  <p
+    class="font-bold text-center mt-5 group-hover:text-[#ff8a00] transition-all"
+  >
+    {title}
+  </p>
+  <div class="text-center">{subtitle}</div>
+</a>
+<style>
+  a {
+    text-decoration-line: none;
+    font-weight: 400;
+  }
+</style>
