@@ -1,4 +1,4 @@
-<!-- ---
+---
 import List from "../layouts/List.astro";
 import Button from "../components/Button.astro";
 import Arrow from "../components/Arrow.astro";
@@ -6,73 +6,6 @@ import DynamicIcon from "../components/DynamicIcon.astro";
 ---
 
 <List title="פעילויות ערים">
-
-  <Button
-    title="אילת - מידע על העיר"
-    href="/cities/eilat-city.pdf"
-    className="border-l-4 border-l-orange-400"
-  >
-    <Arrow height={10} width={10} direction="left" />
-  </Button>
-  <Button
-    className="mt-5 border-l-4 border-l-orange-400"
-    title="אילת - תמונות"
-    href="/cities/eilat-pictures.pdf"
-  >
-    <Arrow height={10} width={10} direction="left" />
-  </Button>
-  <Button
-    className="mt-5 border-l-4 border-l-orange-400"
-    title="באר שבע - מידע על העיר"
-    href="/cities/beer-sheva-city.pdf"
-  >
-    <Arrow height={10} width={10} direction="left" />
-  </Button>
-  <Button
-    className="mt-5 border-l-4 border-l-orange-400"
-    title="באר שבע - תמונות"
-    href="/cities/beer-sheva-pictures.pdf"
-  >
-    <Arrow height={10} width={10} direction="left" />
-  </Button>
-  <Button
-    className="mt-5 border-l-4 border-l-orange-400"
-    title="ירושלים - מידע על העיר"
-    href="/cities/jerusalem-city.pdf"
-  >
-    <Arrow height={10} width={10} direction="left" />
-  </Button>
-  <Button
-    className="mt-5 border-l-4 border-l-orange-400"
-    title="ירושלים - תמונות"
-    href="/cities/jerusalem-pictures.pdf"
-  >
-    <Arrow height={10} width={10} direction="left" />
-  </Button>
-  <Button
-    className="mt-5 border-l-4 border-l-orange-400"
-    title="תל אביב - מידע על העיר"
-    href="/cities/tel-aviv-city.pdf"
-  >
-    <Arrow height={10} width={10} direction="left" />
-  </Button>
-  <Button
-    className="mt-5 border-l-4 border-l-orange-400"
-    title="תל אביב - תמונות"
-    href="/cities/tel-aviv-pictures.pdf"
-  >
-    <Arrow height={10} width={10} direction="left" />
-  </Button>
-</List> -->
-
-
----
-import List from "../layouts/CityLayout.astro";
-import DynamicIcon from "../components/DynamicIcon.astro";
----
-
-<List title="פעילויות ערים">
-
   <DynamicIcon
   href="/cities/eilat-city.pdf"
   title="אילת"
@@ -144,5 +77,4 @@ import DynamicIcon from "../components/DynamicIcon.astro";
   className="border-b-gray-400"
   icon="images/telaviv.jpg"
 />
-
 </List>
