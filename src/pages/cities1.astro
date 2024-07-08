@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import Card from "../components/Card.astro";
+// import Location from "../components/Location.astro";
+// import Recipe from "../components/Recipe.astro";
+// import Puzzle from "../components/Puzzle.astro";
+// import Book from "../components/Book.astro";
+// import Sport from "../components/Sport.astro";
+// import Health from "../components/Health.astro";
+import DynamicIcon from "../components/DynamicIcon.astro";
+---
+
+<Layout title="פעילות יום שעות ארוך">
+  <main>
+<div class="mb-4">לפניכם דף בו מרוכזים קישורים לפי נושאים למגוון פעילויות המתאימות לחניכים ולדיירים שלנו.</div>
+    <div class="mb-4">הקליקו על קטגוריה כדי לצפות בפעילויות:</div>
+    <div
+      role="list"
+      class="flex justify-center flex-wrap md:w-[700px] w-full mx-auto">
+
+      <DynamicIcon
+      href="https://specialforme.org/"
+      title="בריאות"
+      subtitle=""
+      externalLink={true}
+      className="border-b-purple-400"
+      icon="icons/health.ico"
+      />
+
+      <DynamicIcon
+      href="/cities"
+      title="פעילויות ערים"
+      subtitle=""
+      externalLink={false}
+      className="border-b-orange-400"
+      icon="icons/cities.ico"
+      />
+
+      <DynamicIcon
+      href="https://zuzuspecialoly.kshalem.org.il/"
+      title="פעילויות-ספורט"
+      subtitle=""
+      externalLink={true}
+      className="border-b-haki-400"
+      icon="icons/sport.ico"
+      />
+
+      <DynamicIcon
+      href="/stories"
+      title="סיפורים בשפה פשוטה"
+      subtitle=""
+      externalLink={false}
+      className="border-b-green-400"
+      icon="icons/stories.ico"
+      />
+
+      <DynamicIcon
+      href="/recipes"
+      title="מתכונים"
+      subtitle=""
+      externalLink={false}
+      className="border-b-pink-400"
+      icon="icons/recipes.ico"
+      />
+
+      <DynamicIcon
+      href="https://lilach.kshalem.org.il/seeme/story.html"
+      title="תראו אותי"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/eyes.ico"
+      />
+
+      <DynamicIcon
+      href="https://www.adaptit.co.il/wp-content/uploads/2022/07/%D7%97%D7%95%D7%91%D7%A8%D7%AA-%D7%A7%D7%99%D7%A5-%D7%9C%D7%94%D7%A4%D7%A6%D7%94.pdf"
+      title="חוברת בנושא קיץ"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/eyes.ico"
+      />
+
+      <DynamicIcon
+      href="https://www.adaptit.co.il/wp-content/uploads/2022/07/%D7%A1%D7%99%D7%A8%D7%94-%D7%A6%D7%91%D7%A2%D7%95%D7%A0%D7%99%D7%AA-%D7%93%D7%A3-%D7%92%D7%96%D7%99%D7%A8%D7%94-%D7%9C%D7%94%D7%A4%D7%A6%D7%94.pdf"
+      title="דף גזירה לחוברת"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/eyes.ico"
+      />
+
+  <DynamicIcon
+      href="https://drive.google.com/file/d/1BN6SvUjas48LblVIYRiHwvOdVnDzyQgz/view"
+      title="חוברת בנושא ראש השנה"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/eyes.ico"
+      />
+
+  <DynamicIcon
+      href="https://drive.google.com/file/d/1DvpROkIv7HlcIDy68M_phdZvOF_YUri8/view"
+      title="חוברת לפורים"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/eyes.ico"
+      />
+
+  <DynamicIcon
+      href="https://drive.google.com/file/d/1kAwBP0JKtlbD-sy7jQbisVwHCcM7LOPc/view"
+      title="עוד חוברת לפורים"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/eyes.ico"
+      />
+  <DynamicIcon
+      href="https://drive.google.com/file/d/1c47TTFiCqXIkJpzDKVDRk1jcpAWwBQOu/view"
+      title="חוברת לפסח"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/eyes.ico"
+      />
+
+  <DynamicIcon
+      href="https://amiagudatsite.github.io/activities/stories/מערך למידה בשפה פשוטה_מוזיקה אפריקאית.pdf"
+      title="פעילות בנושא מוסיקה"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/eyes.ico"
+      />
+
+    </div>
+  </main>
+</Layout>
