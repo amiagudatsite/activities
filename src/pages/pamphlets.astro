@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import DynamicIcon from "../components/DynamicIcon.astro";
+import Button from "../components/Button.astro";
+import Arrow from "../components/Arrow.astro";
+---
+<Layout title="פעילות יום שעות ארוך">
+ <div class="w-[150px] mt-0 mb-5 ml-6 mr-0">
+  <Button
+  className="py-[4px] px-3 flex-row-reverse"
+  title="חזרה לקטגוריות"
+  href="/"
+  >
+  <Arrow width={8} height={8} direction="right" />
+ </Button>
+</div>
+
+<main>
+  <div class="mb-4">חוברות</div>
+    <div class="mb-4">הקליקו על קטגוריה כדי לצפות בפעילויות:</div>
+    <div
+      role="list"
+      class="flex justify-center flex-wrap md:w-[700px] w-full mx-auto">
+      <DynamicIcon
+      href="https://www.adaptit.co.il/wp-content/uploads/2022/07/%D7%97%D7%95%D7%91%D7%A8%D7%AA-%D7%A7%D7%99%D7%A5-%D7%9C%D7%94%D7%A4%D7%A6%D7%94.pdf"
+      title="חוברת בנושא קיץ"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/summer_booklet.ico"
+      />
+
+      <DynamicIcon
+      href="https://www.adaptit.co.il/wp-content/uploads/2022/07/%D7%A1%D7%99%D7%A8%D7%94-%D7%A6%D7%91%D7%A2%D7%95%D7%A0%D7%99%D7%AA-%D7%93%D7%A3-%D7%92%D7%96%D7%99%D7%A8%D7%94-%D7%9C%D7%94%D7%A4%D7%A6%D7%94.pdf"
+      title="דף גזירה לחוברת"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/cut_sheet.ico"
+      />
+
+  <DynamicIcon
+      href="https://drive.google.com/file/d/1BN6SvUjas48LblVIYRiHwvOdVnDzyQgz/view"
+      title="חוברת בנושא ראש השנה"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/rosh_hashana.ico"
+      />
+
+  <DynamicIcon
+      href="https://drive.google.com/file/d/1DvpROkIv7HlcIDy68M_phdZvOF_YUri8/view"
+      title="חוברת לפורים"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/purim.ico"
+      />
+
+  <DynamicIcon
+      href="https://drive.google.com/file/d/1kAwBP0JKtlbD-sy7jQbisVwHCcM7LOPc/view"
+      title="עוד חוברת לפורים"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/purim.ico"
+      />
+  <DynamicIcon
+      href="https://drive.google.com/file/d/1c47TTFiCqXIkJpzDKVDRk1jcpAWwBQOu/view"
+      title="חוברת לפסח"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/passover.ico"
+      />
+
+  <DynamicIcon
+      href="https://amiagudatsite.github.io/activities/stories/מערך למידה בשפה פשוטה_מוזיקה אפריקאית.pdf"
+      title="פעילות בנושא מוסיקה"
+      subtitle=""
+      externalLink={true}
+      className="border-b-lightBlue-400"
+      icon="icons/music.ico"
+      />
+    </div>
+  </main>
+</Layout>
