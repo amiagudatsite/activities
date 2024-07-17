@@ -1,8 +1,8 @@
 ---
-import "@fontsource-variable/open-sans";
+import '@fontsource-variable/open-sans';
 
-import Logo from "../components/Logo.astro";
-import Accessability from "../components/accessability.astro";
+import Logo from '../components/Logo.astro';
+import Accessability from '../components/accessability.astro';
 
 interface Props {
   title: string;
@@ -12,72 +12,75 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" dir="rtl">
+<html lang='en' dir='rtl'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
     <link
-      rel="icon"
-      type="image/svg+xml"
-      href={(import.meta.env.DEV ? "" : import.meta.env.BASE_URL) +
-        "/favicon.svg"}
+      rel='icon'
+      type='image/svg+xml'
+      href={(import.meta.env.DEV ? '' : import.meta.env.BASE_URL) +
+        '/favicon.svg'}
     />
- <link
-      rel="icon"
-      type="image/svg+xml"
-      href={(import.meta.env.DEV ? "" : import.meta.env.BASE_URL) +
-        "/h.svg"}
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href={(import.meta.env.DEV ? '' : import.meta.env.BASE_URL) + '/h.svg'}
     />
-    <meta name="generator" content={Astro.generator} />
+    <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="flex flex-col h-screen">
-<div class="p-4 shadow-[0_4px_4px_0_#00000040] mb-8">
-  <div class="container mx-auto">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center">
-        <a class="mt-1 ml-1" href={import.meta.env.BASE_URL}>
-          <Logo width={38} height={38} />
-        </a>
-        <a
-          class="no-underline text-xl font-bold ml-2"
-          href={import.meta.env.BASE_URL}>אגודת עמי</a>
-        <a
-          class="no-underline text-xl font-normal"
-          href={import.meta.env.BASE_URL}>פעילות יום שהות ארוך</a>
-      </div>
-      <div class="flex items-center space-x-2">
-        <!-- <img src="accessibilityIcon.jpeg" alt="Logo 1" width={70} height={70} /> -->
-        <Accessability width={40} height={40} />
-       
-        <!-- <img src="like.jpeg" alt="Logo 2" width={70} height={70} /> -->
-      </div>
-    </div>
-  </div>
-</div>
+  <body class='flex flex-col h-screen'>
+    <div
+      class='p-4 shadow-[0_4px_4px_0_#00000040] mb-8'
+      style='background-color: #e2cde4;'
+    >
+      <div class='container mx-auto'>
+        <div class='flex items-center justify-between'>
+          <div class='flex items-center'>
+            <a class='mt-1 ml-1' href={import.meta.env.BASE_URL}>
+              <Logo width={38} height={38} />
+            </a>
+            <a
+              class='no-underline text-xl font-bold ml-2'
+              href={import.meta.env.BASE_URL}>אגודת עמי</a
+            >
+            <a
+              class='no-underline text-xl font-normal'
+              href={import.meta.env.BASE_URL}>פעילות יום שהות ארוך</a
+            >
+          </div>
+          <div class='flex items-center space-x-2'>
+            <!-- <img src="accessibilityIcon.jpeg" alt="Logo 1" width={70} height={70} /> -->
+            <Accessability width={40} height={40} />
 
-
-
-    <div class="container mx-auto mb-auto px-4 sm:p-0">
-      <slot />
-    </div>
-    <div class="bg-bg-600 mt-12">
-      <div class="container mx-auto py-12 px-4">
-        <div class="flex items-center">
-          <Logo width={60} height={60} />
-          <div class="mr-2">
-            <div class="text-lg font-bold">אגודת עמי</div>
-            <div class="text-lg">פעילות יום שהות ארוך</div>
+            <!-- <img src="like.jpeg" alt="Logo 2" width={70} height={70} /> -->
           </div>
         </div>
-        <div class="my-8">
-    אתר זה מרכז פעילויות וחומרים מונגשים קוגניטיבית שנועדו לסייע לצוותי הטיפול של אגודת עמי בהפעלת החניכים פעילות יום שהות ארוך
+      </div>
+    </div>
+
+    <div class='container mx-auto mb-auto px-4 sm:p-0'>
+      <slot />
+    </div>
+    <div class='bg-bg-600 mt-12'>
+      <div class='container mx-auto py-12 px-4'>
+        <div class='flex items-center'>
+          <Logo width={60} height={60} />
+          <div class='mr-2'>
+            <div class='text-lg font-bold'>אגודת עמי</div>
+            <div class='text-lg'>פעילות יום שהות ארוך</div>
+          </div>
         </div>
-        <div class="flex justify-center">
+        <div class='my-8'>
+          אתר זה מרכז פעילויות וחומרים מונגשים קוגניטיבית שנועדו לסייע לצוותי
+          הטיפול של אגודת עמי בהפעלת החניכים פעילות יום שהות ארוך
+        </div>
+        <div class='flex justify-center'>
           <a href={import.meta.env.BASE_URL}>דף הבית</a>
-          <a class="px-6" href="http://www.agudatami.com/">אתר האגודה</a>
-          <a href="http://www.agudatami.com/">תמיכה</a>
+          <a class='px-6' href='http://www.agudatami.com/'>אתר האגודה</a>
+          <a href='http://www.agudatami.com/'>תמיכה</a>
         </div>
       </div>
     </div>

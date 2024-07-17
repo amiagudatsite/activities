@@ -1,77 +1,103 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import DynamicIcon from "../components/DynamicIcon.astro";
+import Layout from '../layouts/Layout.astro';
+import DynamicIcon from '../components/DynamicIcon.astro';
 ---
 
-<Layout title="פעילות יום שעות ארוך">
+<Layout title='פעילות יום שעות ארוך'>
   <main>
-<div class="mb-4">לפניכם דף בו מרוכזים קישורים לפי נושאים למגוון פעילויות המתאימות לחניכים ולדיירים שלנו.</div>
-    <div class="mb-4">הקליקו על קטגוריה כדי לצפות בפעילויות:</div>
+    <div class='mb-4'>
+      לפניכם דף בו מרוכזים קישורים לפי נושאים למגוון פעילויות המתאימות לחניכים
+      ולדיירים שלנו.
+    </div>
+    <div class='mb-4'>הקליקו על קטגוריה כדי לצפות בפעילויות:</div>
     <div
-      role="list"
-      class="flex justify-center flex-wrap md:w-[700px] w-full mx-auto">
-
+      role='list'
+      class='flex justify-center flex-wrap md:w-[700px] w-full mx-auto'
+    >
       <DynamicIcon
-      href="https://specialforme.org/"
-      title="בריאות"
-      subtitle=""
-      externalLink={true}
-      className="border-b-purple-400"
-      icon="icons/health.ico"
+        href='/cities'
+        title='פעילויות ערים'
+        subtitle=''
+        externalLink={false}
+        className='border-b-orange-400'
+        icon='icons/cities.ico'
       />
 
-      <DynamicIcon
-      href="/cities"
-      title="פעילויות ערים"
-      subtitle=""
-      externalLink={false}
-      className="border-b-orange-400"
-      icon="icons/cities.ico"
-      />
-
-      <DynamicIcon
-      href="https://zuzuspecialoly.kshalem.org.il/"
-      title="פעילויות-ספורט"
-      subtitle=""
-      externalLink={true}
-      className="border-b-haki-400"
-      icon="icons/sport.ico"
-      />
-
-      <DynamicIcon
-      href="/stories"
-      title="סיפורים בשפה פשוטה"
-      subtitle=""
-      externalLink={false}
-      className="border-b-green-400"
-      icon="icons/stories.ico"
-      />
-
-      <DynamicIcon
-      href="/recipes"
-      title="מתכונים"
-      subtitle=""
-      externalLink={false}
-      className="border-b-pink-400"
-      icon="icons/recipes.ico"
-      />
-
-      <DynamicIcon
-      href="https://lilach.kshalem.org.il/seeme/story.html"
-      title="תראו אותי"
+        <DynamicIcon
+      href="https://amiagudatsite.github.io/activities/stories/מערך למידה בשפה פשוטה_מוזיקה אפריקאית.pdf"
+      title="פעילות בנושא מוסיקה"
       subtitle=""
       externalLink={true}
       className="border-b-lightBlue-400"
-      icon="icons/eyes.ico"
+      icon="../icons/music.ico"
+      />
+      
+      <DynamicIcon
+        href='https://lilach.kshalem.org.il/seeme/story.html'
+        title='תראו אותי'
+        subtitle=''
+        externalLink={true}
+        className='border-b-lightBlue-400'
+        icon='icons/eyes.ico'
       />
 
       <DynamicIcon
-      href="/pamphlets"
-      title="חוברות"
-      subtitle=""
-      externalLink={false}
-      className="border-b-lightBlue-400"
-      icon="icons/pamphlets.ico"
+        href='/recipes'
+        title='מתכונים'
+        subtitle=''
+        externalLink={false}
+        className='border-b-pink-400'
+        icon='icons/recipes.ico'
+      />
+
+
+      <DynamicIcon
+        href='/activity'
+        title='פעילות יצירה'
+        subtitle=''
+        externalLink={false}
+        className='border-b-pink-400'
+        icon='icons/activity.ico'
+      />
+
+
+            <DynamicIcon
+        href='https://zuzuspecialoly.kshalem.org.il/'
+        title='פעילויות-ספורט'
+        subtitle=''
+        externalLink={true}
+        className='border-b-haki-400'
+        icon='icons/sport.ico'
+      />
+
+      <DynamicIcon
+        href='/stories'
+        title='סיפורים בשפה פשוטה'
+        subtitle=''
+        externalLink={false}
+        className='border-b-green-400'
+        icon='icons/stories.ico'
+      />
+
+
+
+
+      <DynamicIcon
+        href='/pamphlets'
+        title='חוברות'
+        subtitle=''
+        externalLink={false}
+        className='border-b-lightBlue-400'
+        icon='icons/pamphlets.ico'
+      />
+
+            <DynamicIcon
+        href='https://specialforme.org/'
+        title='בריאות'
+        subtitle=''
+        externalLink={true}
+        className='border-b-purple-400'
+        icon='icons/health.ico'
       />
     </div>
   </main>
