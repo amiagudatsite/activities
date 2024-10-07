@@ -1,0 +1,36 @@
+---
+import List from "../layouts/List.astro";
+import Button from "../components/Button.astro";
+import Arrow from "../components/Arrow.astro";
+---
+
+<List title="פעילות בנושא מוזיקה">
+  <Button
+    title="מוזיקה אפריקאית"
+    href="/cities/מערך למידה בשפה פשוטה_מוזיקה אפריקאית (1).pdf"
+    className="border-l-4 border-l-green-400"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-green-400"
+    title="מוזיקה ברזילאית"
+    href="/cities/מערך למידה בשפה פשוטה_מוזיקה ברזילאית.pdf"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-green-400"
+    title="מוזיקה הודית"
+    href="/cities/מערך למידה בשפה פשוטה_מוזיקה הודית.pdf"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+  <Button
+    className="mt-5 border-l-4 border-l-green-400"
+    title="מוזיקה ערבית"
+    href="/cities/מערך למידה בשפה פשוטה_מוזיקה ערבית.pdf"
+  >
+    <Arrow height={10} width={10} direction="left" />
+  </Button>
+</List>
